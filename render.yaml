@@ -1,0 +1,13 @@
+# Render deployment configuration
+# This file tells Render how to build and run your FastAPI application
+
+# Build command
+build: pip install -r requirements.txt
+
+# Start command
+start: uvicorn main:app --host 0.0.0.0 --port $PORT
+
+# Environment variables (set these in Render dashboard)
+# MONGODB_URL=mongodb+srv://username:password@cluster.mongodb.net/llm_lab
+# OPENROUTER_API_KEY=sk-or-v1-...
+# ANTHROPIC_API_KEY=sk-ant-...
